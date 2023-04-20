@@ -16,7 +16,7 @@ public class ControladorCurso {
 	
 	
 	
-	public static List<Curso> findAllCurso(){
+	public static List<Curso> findAll(){
 		EntityManager em = emf.createEntityManager();
 		
 		Query q = em.createNativeQuery("Select * from curso; ", Curso.class);

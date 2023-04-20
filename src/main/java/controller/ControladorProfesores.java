@@ -8,6 +8,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
 
+import model.Estudiante;
 import model.Profesor;
 
 public class ControladorProfesores {
@@ -16,7 +17,7 @@ public class ControladorProfesores {
 	
 	
 	
-	public static List<Profesor> findAllProfesor(){
+	public static List<Profesor> findAll(){
 		EntityManager em = emf.createEntityManager();
 		
 		Query q = em.createNativeQuery("Select * from profesor; ", Profesor.class);
